@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<center>
+    <form method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    Nick Name :<input type="text" name="nick_name"><br><br>
+    Hobby :<input type="text" name="hobby"><br><br>
+    Profile Picture :<input type="file" name="profile_picture"><br><br>
+    Status :<input type="text" name="status"><br><br>
+
+    <label for="gender">Choose color:</label>
+<select id="gender" name="gender">
+  <option value="male">male</option>
+  <option value="female">Female</option>
+
+</select><br><br>
+
+
+
+
+
+        <label for="relationship_status">Choose color:</label>
+<select id="relationship_status" name="relationship_status">
+  <option value="singale">Singale</option>
+  <option value="marrid">Marrid</option>
+</select><br><br>
+
+        phone :<input type="number" name="phone"><br><br>
+
+
+    <button type="submit">Submit</button>
+</form>
+</center>
+
+
+
+{% endblock %}
